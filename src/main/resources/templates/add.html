@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>personnes</title>
+    <link rel="stylesheet"
+          th:href="@{webjars/bootstrap/4.3.1/css/bootstrap.min.css}" />
+</head>
+<body>
+<div class="container">
+<div class="card">
+    <div class="card-header">
+        <h2>Ajouter une personne </h2>
+    </div>
+    <form action="#" th:action="@{add}" method="post" th:object="${user}">
+
+        <label>Full name:</label>
+        <input type="text" th:field="*{name}" /><br/>
+
+        <label>E-mail:</label>
+        <input type="text" th:field="*{mail}" /><br/>
+
+        <br/>
+
+        <button type="submit">Edit</button>
+    </form>
+
+</div>
+</div>
+</div>
+</body>
+</html>
